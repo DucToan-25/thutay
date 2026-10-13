@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="380" height="440" viewBox="0 0 380 440" fill="none" role="img" aria-labelledby="title desc">
+  <title id="title">Một bó hoa nhỏ</title>
+  <desc id="desc">Bó hoa minh họa với hoa hồng phấn, lá xanh và chiếc nơ đỏ.</desc>
+  <defs>
+    <linearGradient id="paper" x1="135" y1="233" x2="260" y2="413" gradientUnits="userSpaceOnUse"><stop stop-color="#FFF6E7"/><stop offset="1" stop-color="#E7CCAF"/></linearGradient>
+    <linearGradient id="rose" x1="-40" y1="-36" x2="40" y2="40" gradientUnits="userSpaceOnUse"><stop stop-color="#F4B5B7"/><stop offset="1" stop-color="#C87580"/></linearGradient>
+    <radialGradient id="glow"><stop stop-color="#F8DDD6" stop-opacity=".8"/><stop offset="1" stop-color="#F8DDD6" stop-opacity="0"/></radialGradient>
+    <filter id="shadow" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="8"/></filter>
+    <g id="flower">
+      <path d="M0-38C16-49 25-28 35-18C51-15 41 10 33 19C32 40 12 42 0 33C-18 46-31 27-33 15C-49 5-38-14-30-21C-25-42-9-47 0-38Z" fill="url(#rose)"/>
+      <path d="M-5-23C15-31 26-13 22 2C32 16 10 30-5 23C-22 30-32 11-24-2C-30-18-14-32-5-23Z" fill="#EEA1AB"/>
+      <path d="M-5-13C7-21 18-9 13 1C17 12 2 20-7 12C-20 10-18-6-5-13Z" fill="#D68593"/>
+      <path d="M-7 0C-1-9 10-5 8 2C6 9-4 10-7 0Z" fill="#F7C1C3"/>
+      <path d="M-25 6C-20 19-8 25 3 22M10-25C22-18 28-5 23 5" stroke="#FAD4CF" stroke-opacity=".7" stroke-width="2" stroke-linecap="round"/>
+    </g>
+    <g id="leaf"><path d="M0 0C-23-8-38-29-31-53C-6-47 8-26 0 0Z" fill="#6C8C69"/><path d="M0 0L-23-43" stroke="#B0BA83" stroke-width="1.5"/></g>
+    <g id="sprig"><path d="M0 0L0-88M0-19L-16-36M0-41L18-57M0-64L-11-76" stroke="#8E9C71" stroke-width="2.5" stroke-linecap="round"/><circle cx="-16" cy="-37" r="5" fill="#F5E6C6"/><circle cx="19" cy="-59" r="6" fill="#F9EDD2"/><circle cx="-12" cy="-77" r="5" fill="#F5E6C6"/><circle cy="-89" r="6" fill="#FFF0D7"/></g>
+  </defs>
+  <ellipse cx="190" cy="230" rx="180" ry="170" fill="url(#glow)"/>
+  <ellipse cx="190" cy="408" rx="63" ry="11" fill="#A86D61" opacity=".15" filter="url(#shadow)"/>
+  <path d="M137 187L185 385M255 174L186 384M179 147L193 388M224 149L183 387M103 208L199 388" stroke="#597554" stroke-width="6" stroke-linecap="round"/>
+  <use href="#leaf" transform="translate(111 216) rotate(-32) scale(1.4)"/><use href="#leaf" transform="translate(151 201) rotate(-63) scale(1.3)"/>
+  <use href="#leaf" transform="translate(271 210) rotate(82) scale(1.45)"/><use href="#leaf" transform="translate(243 169) rotate(63) scale(1.2)"/>
+  <use href="#leaf" transform="translate(182 166) rotate(-12) scale(1.5)"/><use href="#leaf" transform="translate(159 139) rotate(-47) scale(1.1)"/>
+  <use href="#sprig" transform="translate(124 197) rotate(-31)"/><use href="#sprig" transform="translate(266 196) rotate(32)"/>
+  <use href="#sprig" transform="translate(190 154) rotate(-4)"/><use href="#sprig" transform="translate(228 179) rotate(16) scale(.85)"/>
+  <path d="M84 225L165 397L192 408L276 232L204 271L150 257Z" fill="url(#paper)" stroke="#DABD9C" stroke-width="1.5"/>
+  <path d="M84 225L175 350L150 257M276 232L204 271L192 408" stroke="#FFF8EA" stroke-width="3"/>
+  <use href="#flower" transform="translate(139 161) rotate(-14) scale(.92)"/>
+  <use href="#flower" transform="translate(209 128) rotate(21) scale(.94)"/>
+  <use href="#flower" transform="translate(263 169) rotate(12) scale(.89)"/>
+  <use href="#flower" transform="translate(184 192) rotate(-5) scale(1.1)"/>
+  <use href="#flower" transform="translate(112 217) rotate(-27) scale(.73)"/>
+  <use href="#flower" transform="translate(242 230) rotate(15) scale(.85)"/>
+  <use href="#flower" transform="translate(167 253) rotate(-9) scale(.76)"/>
+  <path d="M187 338C164 306 126 319 135 341C143 357 174 350 187 338Z" fill="#9D5361"/>
+  <path d="M188 338C211 309 245 322 235 343C226 357 204 350 188 338Z" fill="#AC6070"/>
+  <path d="M181 342L162 391L183 382L191 396L195 346M194 340L213 384L222 368L236 371L203 340" fill="#B86D78"/>
+  <path d="M143 332C153 330 170 335 181 340M204 339C215 334 224 332 232 336" stroke="#D78F96" stroke-width="2" stroke-linecap="round"/>
+  <ellipse cx="191" cy="339" rx="11" ry="10" fill="#884453"/>
+  <path d="M73 146L76 139L79 146L86 149L79 152L76 159L73 152L66 149Z" fill="#B99A60" opacity=".6"/>
+  <path d="M302 268L304 262L307 268L313 270L307 273L304 279L302 273L296 270Z" fill="#B99A60" opacity=".6"/>
+  <circle cx="297" cy="118" r="2.5" fill="#CA9B8D"/><circle cx="88" cy="286" r="3" fill="#CA9B8D"/>
+</svg>

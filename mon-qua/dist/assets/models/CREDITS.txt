@@ -1,0 +1,16 @@
+Flower Bouquet
+
+Tác giả: icecool (https://sketchfab.com/icecool)
+Nguồn: https://sketchfab.com/3d-models/flower-bouquet-48e92013548247a9ad486dc13110c9b4
+Giấy phép: Creative Commons Attribution 4.0 International (CC BY 4.0)
+https://creativecommons.org/licenses/by/4.0/
+
+Thông tin tác giả, nguồn và giấy phép được lấy từ asset.extras của GLB gốc.
+
+Bản chuyển đổi trong thư mục này chỉ tách GLB thành GLTF, BIN và JPEG
+để mỗi file nhỏ hơn giới hạn 25 MiB của dịch vụ lưu trữ. Hình học và
+ảnh JPEG được giữ nguyên từng byte, không nén lại, không giảm chất lượng.
+Cấu trúc cảnh, vật liệu, màu sắc, UV và phép biến đổi không thay đổi.
+
+SHA-256 của GLB gốc: e908382580f357331096f7e188c8b9c787f7f7f827aadb53c36a19e9ec7ea729
+SHA-256 của hình học BIN: 547491179a0279b4a670ca438681a81ff35d0147231df00fd8dac099a0ddaa55

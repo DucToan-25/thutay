@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600" role="img" aria-labelledby="title desc">
+  <title id="title">Ảnh minh họa — Góc quán quen</title>
+  <desc id="desc">Tranh tĩnh vật tách cà phê, cuốn sách mở và một bình hoa nhỏ cạnh cửa sổ.</desc>
+  <defs>
+    <linearGradient id="wall" x2="0" y2="1"><stop stop-color="#e8d8c5"/><stop offset="1" stop-color="#f5e8d5"/></linearGradient>
+    <filter id="grain"><feTurbulence type="fractalNoise" baseFrequency=".7" numOctaves="3" stitchTiles="stitch"/><feColorMatrix type="saturate" values="0"/><feComponentTransfer><feFuncA type="linear" slope=".07"/></feComponentTransfer><feBlend in="SourceGraphic" mode="multiply"/></filter>
+  </defs>
+  <g filter="url(#grain)">
+    <path fill="url(#wall)" d="M0 0h800v600H0z"/>
+    <path d="M74 0h387v315H74z" fill="#bdc9bd"/>
+    <path d="M89 0h354v293H89z" fill="#d0d8cb"/>
+    <path d="M100 228q68-177 150-62t193-48v175H100z" fill="#acbca4"/>
+    <path d="M260 0v306M75 152h387" stroke="#f0e4d1" stroke-width="16"/>
+    <path d="M63 294h410v23H63z" fill="#b9a287"/>
+    <path d="M0 381q409-47 800 0v219H0z" fill="#bf987d"/>
+    <path d="M0 406q402-40 800 0" fill="none" stroke="#dac0a3" stroke-width="4"/>
+    <ellipse cx="289" cy="477" rx="138" ry="25" fill="#936e5f" opacity=".18"/>
+    <ellipse cx="230" cy="444" rx="97" ry="22" fill="#e2cbb0"/>
+    <path d="M302 367q71-16 53 36-13 36-61 18" fill="none" stroke="#f0e3cf" stroke-width="17"/>
+    <path d="M163 363h143l-16 71q-63 27-111-1z" fill="#f1e5d1"/>
+    <ellipse cx="235" cy="364" rx="72" ry="17" fill="#f9edda"/>
+    <ellipse cx="235" cy="364" rx="60" ry="12" fill="#8b6757"/>
+    <path d="M214 327q-19-20 0-37t-2-31m42 66q-19-20 0-37" fill="none" stroke="#faf2df" stroke-width="7" opacity=".6" stroke-linecap="round"/>
+    <path d="M400 454q71-36 131-17 43-35 116-26l38 120q-78-8-129 21-74-9-144 22z" fill="#ad7c6f"/>
+    <path d="M395 444q70-33 130-13 44-35 113-26l37 116q-78-7-124 23-67-11-143 20z" fill="#f1dfc2"/>
+    <path d="M525 431l26 113" stroke="#c4b190" stroke-width="3"/>
+    <g stroke="#c1b197" stroke-width="3" opacity=".55"><path d="M415 459l97-16m-93 31 96-16m-92 30 96-16m-92 30 96-16m27-44 83-21m-79 35 83-21m-79 34 83-20m-80 34 83-20"/></g>
+    <path d="M574 325h76l-10 91q-30 13-55 0z" fill="#aeb7a0"/>
+    <ellipse cx="612" cy="325" rx="39" ry="9" fill="#cbd0b8"/>
+    <path d="M610 326v-96m0 45-34-33m38 9 28-47m-31 106 43-22" fill="none" stroke="#909e79" stroke-width="5"/>
+    <g fill="#d6a19b"><circle cx="611" cy="232" r="19"/><circle cx="574" cy="241" r="18"/><circle cx="644" cy="207" r="20"/><circle cx="654" cy="285" r="16"/></g>
+  </g>
+</svg>

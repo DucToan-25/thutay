@@ -1,0 +1,9 @@
+node_modules/
+.asset-cache/
+qa/
+test-results/
+playwright-report/
+.openai/runtime/
+*.zip
+*.tar.gz
+*.tgz

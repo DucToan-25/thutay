@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#faf6ef">
+  <meta name="description" content="Một bức thư, một bó hoa và những kỷ niệm — món quà nhỏ từ Nguyễn Đức Toàn.">
+  <title>Món quà online — Nguyễn Đức Toàn</title>
+  <link rel="icon" href="assets/illustrations/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/fonts/fonts.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/gallery.css">
+  <script type="importmap">{"imports":{"three":"./vendor/three/build/three.module.js","three/addons/":"./vendor/three/examples/jsm/"}}</script>
+  <script type="module" src="js/app.js"></script>
+</head>
+<body data-state="envelope">
+  <svg class="icon-library" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <symbol id="icon-heart" viewBox="0 0 24 24"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1.1-1.1a5.5 5.5 0 0 0-7.8 7.8L12 21l8.8-8.6a5.5 5.5 0 0 0 0-7.8Z"/></symbol>
+    <symbol id="icon-volume" viewBox="0 0 24 24"><path d="m11 5-6 4H2v6h3l6 4V5Zm5 3a6 6 0 0 1 0 8m3-11a10 10 0 0 1 0 14"/></symbol>
+    <symbol id="icon-muted" viewBox="0 0 24 24"><path d="m11 5-6 4H2v6h3l6 4V5Zm5 4 6 6m0-6-6 6"/></symbol>
+    <symbol id="icon-arrow" viewBox="0 0 24 24"><path d="M4 12h16m-6-6 6 6-6 6"/></symbol>
+    <symbol id="icon-play" viewBox="0 0 24 24"><path d="m8 5 11 7-11 7V5Z"/></symbol>
+    <symbol id="icon-pause" viewBox="0 0 24 24"><path d="M8 5v14m8-14v14"/></symbol>
+    <symbol id="icon-flower" viewBox="0 0 32 40"><path d="M16 17v21M16 30c-7 0-10-4-11-8 6 0 10 2 11 8Zm0-4c7 0 10-4 11-8-6 0-10 2-11 8Z"/><path d="M16 16c-9 6-17-6-7-9-2-10 12-10 14-1 11 0 10 14 0 14-1 8-13 8-13 0"/><circle cx="16" cy="12" r="3"/></symbol>
+    <symbol id="icon-lock" viewBox="0 0 24 24"><rect x="5" y="10" width="14" height="11" rx="3"/><path d="M8 10V7a4 4 0 0 1 8 0v3m-4 5v2"/></symbol>
+    <symbol id="icon-restart" viewBox="0 0 24 24"><path d="M4 10a8 8 0 1 1 1.5 8M4 4v6h6"/></symbol>
+    <symbol id="icon-grid" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></symbol>
+  </svg>
+
+  <div class="paper-grain" aria-hidden="true"></div>
+  <div class="ambient-decor" aria-hidden="true">
+    <svg class="botanical botanical-left" viewBox="0 0 220 370" fill="none"><g stroke="currentColor" stroke-width="1.3"><path d="M100 370c5-65 29-161 14-246m-8 133c-58-13-69-48-69-48 47-9 64 18 69 48Zm7-72c51-20 64-58 64-58-47 0-59 27-64 58ZM103 290c-29-1-51-17-63-39 34-2 61 12 63 39Z"/><path d="M113 123c-37 10-46-10-31-29-32-15-28-37-2-42-9-29 17-42 34-22 18-25 48-14 42 12 30 3 39 31 10 45 22 22 0 47-28 37-2 21-27 25-25-1Z"/><ellipse cx="118" cy="81" rx="16" ry="21" transform="rotate(-15 118 81)"/><path d="m83 63 20 13m40-31-17 22m26 36-20-13m-28 37 9-26"/></g></svg>
+    <svg class="botanical botanical-right" viewBox="0 0 220 300" fill="none"><g stroke="currentColor" stroke-width="1.2"><path d="M210 1C130 70 126 180 15 290M163 72c-43-3-66 17-74 37 36 0 60-7 74-37Zm-18 57c31-10 47-33 44-55-28 12-42 33-44 55Zm-32 54c-46 2-59-19-64-31 36-8 55 10 64 31Zm-34 48c31 1 54-18 60-44-30 6-48 20-60 44Z"/></g></svg>
+    <span class="tiny-spark spark-one">✦</span><span class="tiny-spark spark-two">✧</span><span class="tiny-spark spark-three">✧</span>
+  </div>
+
+  <header class="site-header">
+    <a class="wordmark" href="./" aria-label="Món quà online, trang đầu"><svg class="brand-flower"><use href="#icon-flower"/></svg><span>một chút thương<span class="wordmark-dot">.</span></span></a>
+    <button id="global-mute" class="icon-button" type="button" aria-label="Tắt âm thanh" aria-pressed="false" title="Tắt âm thanh"><svg class="icon"><use href="#icon-volume"/></svg></button>
+  </header>
+
+  <main id="main-content">
+    <section id="envelope-scene" class="scene envelope-scene" aria-labelledby="gift-heading">
+      <div class="scene-intro"><h1 id="gift-heading" tabindex="-1">Có một điều nhỏ,<br><em>dành riêng cho bạn.</em></h1></div>
+      <div class="envelope-area">
+        <span class="envelope-spark" aria-hidden="true">✧</span>
+        <svg class="little-sprig" viewBox="0 0 90 150" aria-hidden="true" fill="none"><g stroke="#89927b" stroke-width="1.6"><path d="M20 146c13-43 22-86 35-122M33 100c-21-2-25-17-25-17 21-1 26 11 25 17Zm11-39c21 0 25-19 25-19-20-2-24 11-25 19Z"/></g><g fill="#c3b1ba"><ellipse cx="56" cy="24" rx="6" ry="12" transform="rotate(18 56 24)"/><ellipse cx="46" cy="34" rx="5" ry="10" transform="rotate(-30 46 34)"/><ellipse cx="65" cy="36" rx="5" ry="10" transform="rotate(42 65 36)"/><ellipse cx="42" cy="48" rx="5" ry="9" transform="rotate(-30 42 48)"/><ellipse cx="61" cy="51" rx="5" ry="9" transform="rotate(42 61 51)"/></g></svg>
+        <button id="open-envelope" class="envelope-button" type="button" aria-label="Mở phong thư từ Nguyễn Đức Toàn">
+          <span class="envelope-shadow"></span><span class="envelope-back"></span>
+          <span class="envelope-letter"><span class="mini-heart">♡</span><span class="mini-letter-line"></span><span class="mini-letter-line short"></span></span>
+          <span class="envelope-front"></span><span class="envelope-flap"></span>
+          <span class="wax-seal"><svg><use href="#icon-heart"/></svg></span>
+        </button>
+        <span class="pointer-guide" aria-hidden="true"><svg viewBox="0 0 64 72" fill="none"><path d="M29 49 13 27c-4-6 3-11 7-6l10 12-6-23c-2-7 7-9 9-2l7 22 1-3c2-5 8-4 9 0l1 5c6-3 11 1 10 7l-2 14c-1 8-6 13-13 15l-8 2-18-14c-5-4-1-11 4-8l5 1Z" fill="#fffaf3" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/><path d="m11 10-4-5m3 14-7-1m15-6-1-7" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg><span class="pointer-tap"></span></span>
+      </div>
+    </section>
+
+    <section id="letter-scene" class="scene letter-scene" hidden inert aria-labelledby="letter-heading">
+      <div class="scene-intro compact"><h2 id="letter-heading" tabindex="-1">Một lá thư <em>cho bạn.</em></h2></div>
+      <article class="letter-paper"><div class="letter-topline"><span id="sample-letter-note" class="sample-note">Thư mẫu</span><svg class="icon"><use href="#icon-heart"/></svg></div><div id="letter-content" class="letter-content" aria-label="Nội dung bức thư"></div><div class="letter-signature"><span>Thương gửi,</span><strong data-sender>Nguyễn Đức Toàn</strong></div></article>
+      <div id="audio-player" class="audio-player" aria-label="Lời nhắn bằng giọng đọc"><button id="audio-play" class="audio-play" type="button" aria-label="Phát lời nhắn"><svg class="icon"><use href="#icon-play"/></svg></button><div class="audio-main"><div class="audio-label"><span id="audio-label">Phát lời nhắn</span><span id="audio-time">0:00 / 0:00</span></div><input id="audio-progress" type="range" min="0" max="100" value="0" step="0.1" aria-label="Tiến trình lời nhắn" disabled></div><button id="audio-mute" class="icon-button" type="button" aria-label="Tắt âm thanh" aria-pressed="false"><svg class="icon"><use href="#icon-volume"/></svg></button></div>
+      <p id="audio-status" class="audio-status" role="status"></p>
+      <button id="continue-bouquet" class="text-button continue-button" type="button">Tiếp tục đến bó hoa<svg class="icon"><use href="#icon-arrow"/></svg></button>
+    </section>
+
+    <section id="flower-scene" class="scene flower-scene" hidden inert aria-labelledby="flower-heading">
+      <h2 id="flower-heading" class="sr-only" tabindex="-1">Bó hoa và những kỷ niệm</h2>
+      <div id="flower-stage" class="flower-stage" tabindex="0" role="group" aria-label="Không gian ảnh 3D. Chạm bó hoa để mở ảnh. Kéo hoặc dùng phím mũi tên để xoay, cuộn hoặc chụm hai ngón tay để thu phóng.">
+        <div class="scene-atmosphere" aria-hidden="true"><span class="scene-haze haze-rose"></span><span class="scene-haze haze-lilac"></span><span class="scene-haze haze-gold"></span></div>
+        <div class="bouquet-halo" aria-hidden="true"></div>
+        <div id="bouquet-view" class="bouquet-view" aria-label="Bó hoa 3D"></div>
+        <div id="memory-orbits" class="memory-orbits" hidden></div>
+        <div id="model-loading" class="model-loading" role="status"><span class="loading-flower" aria-hidden="true">✿</span><span id="model-status-text" class="sr-only">Đang mở gói hoa của bạn…</span><progress id="model-progress" class="sr-only" max="100" aria-label="Đang tải mô hình hoa"></progress></div>
+        <a id="model-credit" class="model-credit" href="assets/models/CREDITS.txt" target="_blank" rel="noopener" aria-label="Nguồn mô hình hoa: icecool, CC BY 4.0" title="Hoa 3D: icecool · CC BY 4.0"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 11v6m0-10v.5"/></svg></a>
+      </div>
+    </section>
+  </main>
+
+  <audio id="letter-audio" preload="auto"></audio>
+  <div id="live-status" class="sr-only" aria-live="polite" aria-atomic="true"></div>
+  <noscript><p class="noscript-notice">Hãy bật JavaScript để mở phong thư và xem món quà.</p></noscript>
+</body>
+</html>

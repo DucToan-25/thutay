@@ -1,0 +1,38 @@
+.memory-orbits{position:absolute;inset:0;z-index:auto;pointer-events:none}
+.memory-orbits[hidden],.memory-card[hidden],.orbit-photo-inspector[hidden],.orbit-photo-date[hidden],.memory-image[hidden],.memory-image-unavailable[hidden]{display:none!important}
+.memory-card{--heart-clip:polygon(50% 94.09%,47.62% 92.24%,43.73% 89%,38.74% 84.57%,33.04% 79.14%,27.03% 72.9%,21.11% 66.04%,15.67% 58.77%,11.12% 51.27%,7.85% 43.74%,6.25% 36.36%,6.29% 29.14%,8% 23.06%,11.11% 18.21%,15.35% 14.68%,20.47% 12.56%,26.2% 11.92%,32.28% 12.85%,38.45% 15.43%,44.44% 19.76%,50% 25.91%,55.56% 19.76%,61.55% 15.43%,67.72% 12.85%,73.8% 11.92%,79.53% 12.56%,84.65% 14.68%,88.89% 18.21%,92% 23.06%,93.71% 29.14%,93.75% 36.36%,92.15% 43.74%,88.88% 51.27%,84.33% 58.77%,78.89% 66.04%,72.97% 72.9%,66.96% 79.14%,61.26% 84.57%,56.27% 89%,52.38% 92.24%);position:absolute;left:0;top:0;display:block;width:var(--memory-card-width,240px);height:auto;aspect-ratio:240/220;padding:0;border:0;border-radius:0;background:transparent;cursor:grab;pointer-events:none;opacity:0;transform-origin:center;touch-action:none;-webkit-tap-highlight-color:transparent;will-change:transform,opacity;isolation:isolate}
+.memory-card.is-visible{opacity:var(--memory-depth-opacity,1);pointer-events:auto}
+.memory-card:active{cursor:grabbing}
+.memory-card.is-changing{transition:transform .36s cubic-bezier(.22,1,.36,1),opacity .24s ease}
+.memory-card-surface{position:relative;display:block;width:100%;height:100%;aspect-ratio:240/220;filter:drop-shadow(0 18px 12px #bd366d29) drop-shadow(0 2px 2px #c7396926) blur(var(--memory-depth-blur,0px));transition:filter .25s ease}
+.crystal-shell{position:absolute;inset:0;display:block;width:100%;height:100%;overflow:visible;pointer-events:none;z-index:3}
+.memory-photo-clip{position:absolute;inset:0;display:block;clip-path:var(--heart-clip);overflow:hidden;background:linear-gradient(155deg,#fff4fb47 7%,#ec7da532 65%,#ffe6f851);z-index:1;transform:scale(.915);transform-origin:50% 53%}
+.memory-image{display:block;width:100%;height:100%;object-fit:cover;object-position:center;opacity:.8;filter:saturate(.85) contrast(.92);user-select:none;-webkit-user-drag:none;transition:opacity .22s ease,filter .22s ease}
+.memory-card-shine{position:absolute;inset:0;z-index:2;display:block;pointer-events:none;clip-path:var(--heart-clip);background:linear-gradient(124deg,#fff8fb54 8%,transparent 29% 50%,#ffcbe629 64%,#fff9ff50 87%);mix-blend-mode:screen}
+.memory-card:hover .memory-card-surface,.memory-card:focus-visible .memory-card-surface{filter:drop-shadow(0 20px 15px #bc376e38) drop-shadow(0 0 12px #fff4fa65)}
+.memory-card:hover .memory-image,.memory-card:focus-visible .memory-image{opacity:.94;filter:saturate(1) contrast(1)}
+.memory-card:focus-visible{outline:2px solid #fff5fb;outline-offset:2px;border-radius:24px}
+.memory-card.is-behind .memory-card-surface{filter:drop-shadow(0 7px 10px #bf4f721a) blur(var(--memory-depth-blur,0px))}
+.memory-image-unavailable{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:7px;width:100%;height:100%;padding:18px;text-align:center;color:#c46d8b;background:radial-gradient(ellipse at 35% 30%,#fff1f95e,#fa9bc128);font:12px/1.5 var(--sans,system-ui,sans-serif)}
+.memory-image-unavailable svg{display:block;width:60px;height:60px;margin:0 auto;opacity:.65;transform:rotate(-8deg);fill:none;stroke:currentColor;stroke-width:1.6}
+.memory-placeholder-icon{font-size:48px;line-height:1;color:#ca6f92;opacity:.7}
+.memory-card.is-selected{width:var(--memory-selected-width,380px);aspect-ratio:var(--memory-image-ratio,1.38);opacity:1;cursor:pointer;pointer-events:auto}
+.memory-card.is-selected .memory-card-surface{aspect-ratio:var(--memory-image-ratio,1.38);padding:8px;border:1px solid #ffedf9db;border-radius:22px;background:linear-gradient(135deg,#fff9fde8,#ffe2efdc);box-shadow:0 24px 75px #a327604d,0 0 0 5px #fff4fa26;filter:none}
+.memory-card.is-selected .crystal-shell,.memory-card.is-selected .memory-card-shine{display:none}
+.memory-card.is-selected .memory-photo-clip{inset:7px;clip-path:none!important;border-radius:15px;transform:none;background:#fff6fa}
+.memory-card.is-selected .memory-image{object-fit:contain;opacity:1;filter:none;background:#fff6fa}
+.has-selection .memory-card:not(.is-selected) .memory-card-surface{filter:drop-shadow(0 10px 14px #b03e6620) blur(1px)}
+.orbit-photo-inspector{position:absolute;z-index:200;display:flex;align-items:flex-start;gap:5px;transform:translateX(-50%);border:1px solid #fff2f8c9;border-radius:15px;background:#fff5faed;color:#835164;padding:7px 5px 7px 14px;box-shadow:0 8px 28px #aa33682d;backdrop-filter:blur(15px);pointer-events:auto;touch-action:manipulation;animation:memory-caption-in .24s ease both}
+.orbit-photo-copy{flex:1;min-width:0;padding:7px 0}
+.orbit-photo-caption{margin:0;max-height:100px;overflow:auto;overscroll-behavior:contain;font:13px/1.7 var(--sans,system-ui,sans-serif);color:#92566f;text-align:left}
+.orbit-photo-date{display:block;margin:0 0 4px;font:11px/1.5 var(--sans,system-ui,sans-serif);color:#b77593;letter-spacing:.03em}
+.orbit-selection-close{display:flex;align-items:center;justify-content:center;width:40px;height:40px;flex-shrink:0;padding:0;border:0;border-radius:50%;background:transparent;color:#ab6480;font:24px/1 system-ui,sans-serif;cursor:pointer}
+.orbit-selection-close:hover{background:#f4d5e367}
+.orbit-photo-inspector button:focus-visible{outline:2px solid #b66589;outline-offset:3px}
+.memory-sparkle{position:absolute;display:block;width:var(--sparkle-size,10px);height:var(--sparkle-size,10px);background:#fffafc;clip-path:polygon(50% 0,60% 40%,100% 50%,60% 60%,50% 100%,40% 60%,0 50%,40% 40%);filter:drop-shadow(0 0 8px #fffbff);opacity:.8;pointer-events:none;animation:memory-sparkle 3.2s ease-in-out var(--sparkle-delay,0s) infinite alternate}
+@keyframes memory-caption-in{from{opacity:0;translate:0 -5px}to{opacity:1;translate:0 0}}
+@keyframes memory-sparkle{from{opacity:.25;scale:.55}to{opacity:1;scale:1.2}}
+.page-inactive .memory-sparkle{animation-play-state:paused}
+.memory-orbits.has-selection .memory-sparkle{animation-play-state:paused}
+@media(max-width:600px){.memory-card.is-selected .memory-card-surface{padding:6px;border-radius:19px}.memory-card.is-selected .memory-photo-clip{inset:5px;border-radius:13px}.orbit-photo-caption{line-height:1.65}.memory-image-unavailable{font-size:11px;padding:14px}.memory-image-unavailable svg{width:48px;height:48px}.memory-placeholder-icon{font-size:36px}.orbit-photo-inspector{padding-left:12px}}
+@media(prefers-reduced-motion:reduce){.memory-card,.memory-card-surface,.memory-image{transition:none}.orbit-photo-inspector,.memory-sparkle{animation:none}}

@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600" role="img" aria-labelledby="title desc">
+  <title id="title">Ảnh minh họa — Một buổi chiều bên biển</title>
+  <desc id="desc">Tranh phong cảnh biển màu pastel, mặt trời vàng, bãi cát và chiếc ô sọc.</desc>
+  <defs>
+    <linearGradient id="sky" x2="0" y2="1"><stop stop-color="#e3bcc0"/><stop offset="1" stop-color="#f9d9b8"/></linearGradient>
+    <linearGradient id="sea" x2="0" y2="1"><stop stop-color="#a0bbb6"/><stop offset="1" stop-color="#b6cec1"/></linearGradient>
+    <filter id="grain"><feTurbulence type="fractalNoise" baseFrequency=".65" numOctaves="3" stitchTiles="stitch"/><feColorMatrix type="saturate" values="0"/><feComponentTransfer><feFuncA type="linear" slope=".08"/></feComponentTransfer><feBlend in="SourceGraphic" mode="multiply"/></filter>
+  </defs>
+  <g filter="url(#grain)">
+    <path fill="url(#sky)" d="M0 0h800v600H0z"/>
+    <circle cx="540" cy="213" r="66" fill="#f8e8bc"/>
+    <path d="M0 283q160-13 320 0t480 0v317H0z" fill="url(#sea)"/>
+    <path d="M0 412q180-31 372 10t428 28v150H0z" fill="#e9c9a3"/>
+    <path d="M0 407q186-26 378 12t422 25" fill="none" stroke="#f5ead2" stroke-width="12"/>
+    <g fill="none" stroke="#e2dacf" stroke-width="3" opacity=".55"><path d="M467 312h130m-90 15h51M82 331h120m82 40h139m-59-30h99M573 381h86"/></g>
+    <ellipse cx="190" cy="536" rx="116" ry="14" fill="#c8a885" opacity=".35"/>
+    <path d="M181 426v103" stroke="#b4947d" stroke-width="7"/>
+    <path d="M64 434q107-185 224 0" fill="#fbecdb"/>
+    <path d="M64 434q37-105 117-140-43 97-40 140m40-140q45 77 64 140h43q-25-75-107-140" fill="#ba7779"/>
+    <path d="M62 434q40-12 79 0t77 0 72 0" fill="none" stroke="#a4676a" stroke-width="3"/>
+    <path d="M340 493l102 18-16 52-103-18z" fill="#f0e0c4"/><path d="M346 502l87 16m-93-1 87 15m-93-1 87 15" stroke="#c69b88" stroke-width="5"/>
+    <path d="M742 405l20-46m-19 31-30-19m37 3 31-30" stroke="#b2ac86" stroke-width="5" stroke-linecap="round"/>
+  </g>
+</svg>

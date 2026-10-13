@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600" role="img" aria-labelledby="title desc">
+  <title id="title">Ảnh minh họa — Một đêm thật yên</title>
+  <desc id="desc">Tranh hồ nước buổi tối với trăng lưỡi liềm, những ngôi sao và núi xa.</desc>
+  <defs>
+    <linearGradient id="sky" x2="0" y2="1"><stop stop-color="#696b80"/><stop offset="1" stop-color="#b1a0a1"/></linearGradient>
+    <linearGradient id="water" x2="0" y2="1"><stop stop-color="#8c9695"/><stop offset="1" stop-color="#717f83"/></linearGradient>
+    <filter id="grain"><feTurbulence type="fractalNoise" baseFrequency=".7" numOctaves="3" stitchTiles="stitch"/><feColorMatrix type="saturate" values="0"/><feComponentTransfer><feFuncA type="linear" slope=".07"/></feComponentTransfer><feBlend in="SourceGraphic" mode="multiply"/></filter>
+  </defs>
+  <g filter="url(#grain)">
+    <path fill="url(#sky)" d="M0 0h800v600H0z"/>
+    <path d="M598 96a48 48 0 1 0 28 85 53 53 0 0 1-28-85z" fill="#e9d7b4"/>
+    <g fill="#ecdfc4"><circle cx="120" cy="91" r="2"/><circle cx="217" cy="151" r="2"/><circle cx="356" cy="65" r="2"/><circle cx="463" cy="131" r="2"/><circle cx="720" cy="218" r="2"/><circle cx="665" cy="49" r="2"/><circle cx="75" cy="213" r="2"/><circle cx="312" cy="179" r="2"/><path d="M421 83l2 5 5 2-5 2-2 5-2-5-5-2 5-2zM168 195l2 5 5 2-5 2-2 5-2-5-5-2 5-2z"/></g>
+    <path d="M0 319l118-133 154 149 146-84 127 77 158-131 97 103v300H0z" fill="#7c8288"/>
+    <path d="M0 348q176-42 341-7t459-32v291H0z" fill="#677c7c"/>
+    <path d="M0 384q203-24 400 5t400 0v211H0z" fill="url(#water)"/>
+    <path d="M548 403h68m-77 19h86m-70 21h57m-93 22h99m-97 23h114" stroke="#d7c7af" stroke-width="3" opacity=".55"/>
+    <path d="M0 440q78-18 113 6 44 26 87 124L0 600z" fill="#586e67"/>
+    <path d="M737 422q-63 25-79 83l-43 95h185V422z" fill="#5d7068"/>
+    <g fill="#4e6560"><path d="M35 459V242l-50 83h29l-42 72h46l-45 74zM97 468V301l-39 68h22l-36 55h39l-38 51zM758 463V287l-46 81h28l-43 66h46l-45 52z"/></g>
+    <path d="M309 489q68 13 145 0-11 27-38 29h-68q-28-6-39-29z" fill="#6c5d5a"/>
+    <path d="M339 483l81 7m-8-11 35 42" stroke="#aa9280" stroke-width="5" stroke-linecap="round"/>
+    <path d="M275 530h127m79 28h125m-199-11h40M154 415h118m428 28h32" stroke="#bac0b2" stroke-width="2" opacity=".26"/>
+  </g>
+</svg>
