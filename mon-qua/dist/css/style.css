@@ -13,6 +13,8 @@
 @media(max-height:500px) and (orientation:landscape){.site-header{padding-top:10px;padding-bottom:10px}.envelope-area{height:290px;margin-top:10px}.envelope-button{width:360px}.envelope-scene h1{font-size:34px}.flower-stage{height:350px;min-height:350px}.scene{padding-top:8px}.letter-paper{padding-top:19px}}
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important;scroll-behavior:auto!important}.envelope-button{transform:rotate(-2deg)}.pointer-guide{transform:translate(-5px,-4px) rotate(-9deg)}.pointer-tap{display:none}}
 
+.letter-content p{white-space:pre-line}
+.letter-content .letter-quote{font-family:var(--serif);color:var(--rose);border-left:2px solid var(--rose-light);padding:8px 0 8px 20px;margin:24px 0}
 .envelope-scene .scene-intro{transition:opacity .28s ease,transform .35s var(--ease)}
 .envelope-scene.is-opening .scene-intro{opacity:0;transform:translateY(-10px)}
 

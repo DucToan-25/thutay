@@ -14,7 +14,7 @@ for (const name of await readdir(path.join(dist, 'js'))) {
   assert.equal(check.status, 0, check.stderr);
 }
 assert(giftConfig.sender && Array.isArray(giftConfig.letter.paragraphs));
-for (const relative of [giftConfig.model.src,giftConfig.model.fallback,...giftConfig.photos.map(photo => photo.src),...(giftConfig.audio.src ? [giftConfig.audio.src] : [])]) await existsAsset(relative);
+for (const relative of [giftConfig.model.src,giftConfig.model.fallback,...giftConfig.photos.map(photo => photo.src),...(giftConfig.audio.tracks || (giftConfig.audio.src ? [giftConfig.audio.src] : [])),...(giftConfig.flowerMusic?.src ? [giftConfig.flowerMusic.src] : [])]) await existsAsset(relative);
 const html = await readFile(path.join(dist,'index.html'),'utf8');
 for (const match of html.matchAll(/(?:src|href)="([^"#]+)"/g)) {
   if (/^(?:https?:|data:|\.\/)/.test(match[1])) continue;

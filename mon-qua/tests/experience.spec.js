@@ -1,6 +1,7 @@
 import { test, expect } from '@playwright/test';
 import { mkdir } from 'node:fs/promises';
 import { fileURLToPath } from 'node:url';
+import { giftConfig } from '../dist/js/config.js';
 
 const output = new URL('../qa/', import.meta.url);
 const cards = '.memory-card';
@@ -163,7 +164,7 @@ async function configure(page, { audioSeconds, failedAudio = false, photos, para
   await page.route('**/js/config.js', async route => {
     const response = await route.fetch();
     let body = await response.text();
-    if (audioSeconds !== undefined) body += "\ngiftConfig.audio.src = 'assets/audio/test.wav';";
+    if (audioSeconds !== undefined) body += "\ngiftConfig.audio.tracks = ['assets/audio/test.wav'];";
     if (photos) body += `\ngiftConfig.photos = ${JSON.stringify(photos)};`;
     if (paragraphs) body += `\ngiftConfig.letter.paragraphs = ${JSON.stringify(paragraphs)};`;
     await route.fulfill({ response, body });
@@ -232,9 +233,9 @@ test('model and first photos preload behind the envelope and load once through t
   await screenshot(page, 'crystal-desktop-envelope.png');
   await page.locator('#open-envelope').evaluate(button => { for (let i = 0; i < 6; i++) button.click(); });
   await state(page, 'letter');
-  await expect(page.locator('#letter-content p')).toHaveCount(4);
-  await expect(page.locator('#audio-play')).toBeDisabled();
-  await expect(page.locator('#letter-audio')).toHaveJSProperty('paused', true);
+  await expect(page.locator('#letter-content p')).toHaveCount(giftConfig.letter.paragraphs.length + 1);
+  await expect(page.locator('#audio-play')).toBeEnabled();
+  await expect(page.locator('#letter-audio')).toHaveJSProperty('paused', false);
   await screenshot(page, 'crystal-desktop-letter.png');
   await page.locator('#continue-bouquet').click();
   await state(page, 'bouquet');
@@ -476,14 +477,14 @@ test('valid audio advances once to the bouquet and resets playback', async ({ pa
   await expect(page.locator('#letter-audio')).toHaveJSProperty('currentTime', 0);
 });
 
-test('audio ending during envelope animation or the letter crossfade still advances', async ({ page }) => {
+test('short audio waits for the opening animation before playing and then advances', async ({ page }) => {
   await modelFailure(page);
   for (const audioSeconds of [0.2, 1.25]) {
     await configure(page, { audioSeconds });
     await page.goto('/');
     const box = await page.locator('#open-envelope').boundingBox();
     await page.mouse.click(box.x + box.width / 2, box.y + box.height / 2);
-    await state(page, 'bouquet');
+    await expect(page.locator('body')).toHaveAttribute('data-state', 'bouquet', { timeout: 15000 });
     await expect(page.locator('#letter-scene')).toBeHidden();
   }
 });
